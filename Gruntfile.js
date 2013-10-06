@@ -20,12 +20,37 @@ module.exports = function (grunt) {
                     sourcemap: true
                     // declaration: true
                 }
+            },
+            dist: {
+                src: ['src/main/ts/*.ts'],
+                dest: 'dist/cdemo.js',
+                options: {
+                    module: 'commonjs',
+                    target: 'es5',
+                    // sourcemap: true,
+                    declaration: true
+                }
+            }
+        },
+        uglify: {
+            options: {
+                banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
+                    '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
+                    'Copyright 2013 Kai Toedter\n' +
+                    'Licensed under the Apache License, Version 2.0 */\n'
+            },
+            min: {
+                files: {
+                    'dist/cdemo.min.js': ['dist/cdemo.js']
+                }
             }
         }
     });
 
     grunt.loadNpmTasks('grunt-typescript');
     grunt.loadNpmTasks('grunt-contrib-jasmine');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    grunt.registerTask('default', ['typescript', 'jasmine']);
+    grunt.registerTask('default', ['typescript:base', 'jasmine']);
+    grunt.registerTask('dist', ['typescript:dist', 'uglify']);
 };
