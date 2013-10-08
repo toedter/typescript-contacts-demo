@@ -51,6 +51,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jasmine');
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    grunt.registerTask('default', ['typescript:base', 'jasmine']);
+    grunt.registerTask('default', ['typescript:base', 'jasmine', 'dist']);
     grunt.registerTask('dist', ['typescript:dist', 'uglify']);
 };
