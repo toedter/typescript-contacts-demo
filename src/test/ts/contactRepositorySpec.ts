@@ -35,4 +35,11 @@ describe('Contact Repository', () => {
         contactRepository.addContact(contact);
         expect(contactRepository.getContacts()).toContain(contact);
     });
+
+    it('should be empty after all contacts have been removed', () => {
+        var contact:cdemo.Contact = new cdemo.SimpleContact('Kai', 'Toedter', 'kai@toedter.com');
+        contactRepository.addContact(contact);
+        contactRepository.clear();
+        expect(contactRepository.getContacts().length).toBe(0);
+    });
 });

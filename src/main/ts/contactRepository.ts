@@ -22,6 +22,7 @@ module cdemo {
     export interface ContactRepository {
         getContacts(): Contact[];
         addContact(contact:Contact);
+        clear();
     }
 
     export class SimpleContactRepository implements ContactRepository {
@@ -36,6 +37,10 @@ module cdemo {
 
         addContact(contact:Contact) {
             this.contacts.push(contact);
+        }
+
+        clear() {
+            this.contacts = [];
         }
     }
 }

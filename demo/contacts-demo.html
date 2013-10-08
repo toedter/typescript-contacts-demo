@@ -22,10 +22,8 @@
 		<div data-role="footer" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a onclick="yelp.callLatLong('OOP',48.136848, 11.695118)">OOP</a></li>
-					<li><a onclick="yelp.callLatLong('JAX', 50.0019,8.27561)">JAX</a></li>
-					<li><a onclick="yelp.callLatLong('W-JAX', 48.151149,11.618246)">W-JAX</a></li>
-					<li><a onclick="yelp.callAddress('JavaOne', '333%20OFarrell%20St%2ASan%20Francisco%2A%20CA')">JavaOne</a></li>
+                    <li><a onclick="cdemo.initContacts()">Init Contacts</a></li>
+                    <li><a onclick="cdemo.clearContacts()">Clear Contacts</a></li>
 				</ul>
 			</div>
 		</div>
@@ -36,17 +34,18 @@
 		</div>
 		<div data-role="content">
 			<form>
-				<div data-role="fieldcontain">
-					<label for="label">Label</label> <input type="text" name="label" id="label" value="" />
-				</div>
+                <div data-role="fieldcontain">
+                    <label for="firstName">First Name</label> <input type="text" name="firstName" id="firstName" value="" />
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="lastName">Lastt Name</label> <input type="text" name="lastName" id="lastName" value="" />
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="email">EMail</label> <input type="text" name="email" id="email" value="" />
+                </div>
 				<div data-role="fieldcontain">
 					<label for="address">Address</label>
 					<textarea cols="40" rows="8" name="address" id="address"></textarea>
-				</div>
-				<div data-role="fieldcontain">
-					<label for="radius">Range</label> <input type="range" name="radius" id="radius" value="5" min="1" max="10"
-						data-highlight="true"
-					/>
 				</div>
 				<button type="submit" name="submit" value="submit" data-theme="b">Submit</button>
 			</form>
