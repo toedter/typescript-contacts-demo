@@ -14,7 +14,8 @@ module.exports = function (config) {
 
         // list of files / patterns to load in the browser
         files: [
-            'src/**/*.js'
+            'src/**/*.js',
+            'src/**/*.map'
         ],
 
 
@@ -23,16 +24,10 @@ module.exports = function (config) {
 
         ],
 
-        preprocessors: {
-            // source files, that you wanna generate coverage for
-            // do not include tests or libraries
-            // (these files will be instrumented by Istanbul)
-            'src/**/*.js': ['coverage']
-        },
 
         // test results reporter to use
         // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-        reporters: ['progress', 'coverage'],
+        reporters: ['progress'],
 
 
         // web server port
