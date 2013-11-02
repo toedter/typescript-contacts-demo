@@ -19,9 +19,20 @@
 /// <reference path="contact.ts" />
 
 module cdemo {
-    export interface ContactRepository {
-        getContacts(): Contact[];
-        addContact(contact:Contact);
-        clear();
+    export class SimpleContact implements Contact {
+        constructor(private firstName:string, private lastName:string, private email:string) {
+        }
+
+        getFirstName():string {
+            return this.firstName;
+        }
+
+        getLastName():string {
+            return this.lastName;
+        }
+
+        getEMail():string {
+            return this.email;
+        }
     }
 }

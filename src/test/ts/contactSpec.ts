@@ -18,6 +18,7 @@
 
 /// <reference path="../../typescript-defs/jasmine.d.ts" />
 /// <reference path="../../main/ts/contact.ts" />
+/// <reference path="../../main/ts/simpleContact.ts" />
 
 describe('Contact', () => {
     it('should be initialized', () => {

@@ -18,6 +18,8 @@
 
 /// <reference path="../../typescript-defs/jasmine.d.ts" />
 /// <reference path="../../main/ts/contactRepository.ts" />
+/// <reference path="../../main/ts/simpleContact.ts" />
+/// <reference path="../../main/ts/simpleContactRepository.ts" />
 
 describe('Contact Repository', () => {
     var contactRepository:cdemo.ContactRepository;

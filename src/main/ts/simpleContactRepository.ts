@@ -17,11 +17,25 @@
  */
 
 /// <reference path="contact.ts" />
+/// <reference path="contactRepository.ts" />
 
 module cdemo {
-    export interface ContactRepository {
-        getContacts(): Contact[];
-        addContact(contact:Contact);
-        clear();
+    export class SimpleContactRepository implements ContactRepository {
+        private contacts:Contact[] = [];
+
+        constructor() {
+        }
+
+        getContacts():Contact[] {
+            return this.contacts;
+        }
+
+        addContact(contact:Contact) {
+            this.contacts.push(contact);
+        }
+
+        clear() {
+            this.contacts = [];
+        }
     }
 }
