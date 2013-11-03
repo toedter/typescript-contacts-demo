@@ -39,7 +39,6 @@ module cdemo {
         }
 
         static fromJson(json:string) {
-            console.log(json);
             var jsonObject = JSON.parse(json);
             var type:cdemo.EventType = EventType[String(jsonObject.type)];
             if (!type) {
