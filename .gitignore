@@ -3,6 +3,7 @@ bower_components
 dist
 .idea
 .grunt
+.project
 src/**/*.js
 src/**/*.map
 _SpecRunner.html

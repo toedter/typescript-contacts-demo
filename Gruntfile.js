@@ -6,7 +6,7 @@ module.exports = function (grunt) {
         jasmine: {
             src: 'src/**/*.js',
             options: {
-                specs: 'spec/*Spec.js',
+//                specs: 'src/**/*Spec.js',
                 keepRunner: true
             }
         },
