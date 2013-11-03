@@ -16,7 +16,7 @@
  limitations under the License.
  */
 
-///<reference path="Event.ts" />
+///<reference path="event.ts" />
 
 module cdemo {
     export class EventBus<T> {
