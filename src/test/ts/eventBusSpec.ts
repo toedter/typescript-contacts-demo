@@ -29,11 +29,11 @@ describe("EventBus", () => {
         eventBus = new cdemo.EventBus();
     });
 
-    it("The initial created event bus should exist", () => {
+    it("should be initialized", () => {
         expect(eventBus).toBeDefined();
     });
 
-    it("The registered subscriber should be invoked", () => {
+    it("should invoke subscriber after publish", () => {
         var invoked:boolean = false;
         eventBus.subscribe(function (event:cdemo.Event) {
             invoked = true;
