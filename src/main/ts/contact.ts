@@ -18,7 +18,7 @@
 
 module cdemo {
     export interface Contact {
-        getFirstName():string;
+        getFirstName(): string;
         getLastName(): string;
         getEMail(): string;
     }

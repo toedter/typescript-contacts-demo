@@ -40,9 +40,9 @@ module cdemo {
 
         static fromJson(json:string) {
             var jsonObject = JSON.parse(json);
-            var type:cdemo.EventType = EventType[String(jsonObject.type)];
+            var type:EventType = EventType[String(jsonObject.type)];
             if (!type) {
-                type = cdemo.EventType.UNKNOWN;
+                type = EventType.UNKNOWN;
             }
 
             return new Event(type, jsonObject.sourceId, jsonObject.data);
