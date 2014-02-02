@@ -4,7 +4,7 @@
     "description": "test project for developing a demo with typescript, javascript, jasmine, grunt, bower, etc.",
     "dependencies": {
         "jquery": "latest",
-        "jquery-mobile-min": "latest"
+        "jquery-mobile-bower": "latest"
     },
     "devDependencies": {}
 }

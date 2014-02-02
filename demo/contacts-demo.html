@@ -3,17 +3,17 @@
 <head>
 <title>TypeScript Contacts Demo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../bower_components/jquery-mobile-min/jquery.mobile.min.css" />
+<link rel="stylesheet" href="../bower_components/jquery-mobile-bower/css/jquery.mobile-1.4.0.min.css" />
 <script src="../bower_components/jquery/jquery.min.js"></script>
-<script src="../bower_components/jquery-mobile-min/jquery.mobile.min.js"></script>
+<script src="../bower_components/jquery-mobile-bower/js/jquery.mobile-1.4.0.min.js"></script>
 <script src="../dist/cdemo.min.js"></script>
 <script src="contacts-demo.js"></script>
 </head>
 <body>
-	<div data-role="page" id="main" data-theme="a">
+	<div data-role="page" id="main" data-theme="b">
 		<div data-role="header" data-position="fixed">
 			<h1>Contacts</h1>
-			<a href="#new" data-icon="new" class="ui-btn-right" data-rel="dialog">New</a>
+			<a href="#new" data-icon="plus" class="ui-btn-right" data-rel="dialog">New</a>
 		</div>
 		<div data-role="content" id="contactList">
 			<ul data-role="listview" data-inset="true" data-filter="true">
@@ -28,7 +28,7 @@
 			</div>
 		</div>
 	</div>
-	<div data-role="page" id="new" data-add-back-btn="true" data-direction="reverse" >
+	<div data-role="page" id="new" data-add-back-btn="true" data-direction="reverse" data-theme="b">
 		<div data-role="header" data-position="fixed">
 			<h1>New Location</h1>
 		</div>
@@ -38,7 +38,7 @@
                     <label for="firstName">First Name</label> <input type="text" name="firstName" id="firstName" value="" />
                 </div>
                 <div data-role="fieldcontain">
-                    <label for="lastName">Lastt Name</label> <input type="text" name="lastName" id="lastName" value="" />
+                    <label for="lastName">Last Name</label> <input type="text" name="lastName" id="lastName" value="" />
                 </div>
                 <div data-role="fieldcontain">
                     <label for="email">EMail</label> <input type="text" name="email" id="email" value="" />
