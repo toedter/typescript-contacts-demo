@@ -44,13 +44,22 @@ module.exports = function (grunt) {
                     'dist/cdemo.min.js': ['dist/cdemo.js']
                 }
             }
+        },
+        jshint: {
+             all: {
+                options: {
+                    '-W069': true
+                },
+                src: ['Gruntfile.js', 'src/**/*.js']
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-typescript');
     grunt.loadNpmTasks('grunt-contrib-jasmine');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
 
-    grunt.registerTask('default', ['typescript:base', 'jasmine', 'dist']);
+    grunt.registerTask('default', ['typescript:base', 'jasmine', 'jshint', 'dist']);
     grunt.registerTask('dist', ['typescript:dist', 'uglify']);
 };
