@@ -15,3 +15,8 @@ To run it:
 - Run "grunt" (compiles the typescript, runs the tests und creates an uglified distribution)
 - Open "demo/contacts-demo.html" in a web browser
 
+License
+-------
+
+MIT, see http://toedter.mit-license.org
+
