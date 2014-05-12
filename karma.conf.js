@@ -14,8 +14,9 @@ module.exports = function (config) {
 
         // list of files / patterns to load in the browser
         files: [
-            'src/**/*.js'
-            // 'src/**/*.map'
+            'src/**/*.js',
+            { pattern: 'src/**/*.js.map', included: false },
+            { pattern: 'src/**/*.ts', included: false }
         ],
 
 
