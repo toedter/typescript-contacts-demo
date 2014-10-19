@@ -3,7 +3,10 @@
     "version": "0.1.0",
     "description": "test project for developing a demo with typescript, javascript, jasmine, grunt, bower, etc.",
     "dependencies": {
-        "jquery": "latest",
+        "angular": "latest",
+        "angular-resource": "latest",
+        "angular-mocks": "latest",
+        "bootstrap": "latest",
         "jquery-mobile-bower": "latest"
     },
     "devDependencies": {}
